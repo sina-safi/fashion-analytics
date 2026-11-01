@@ -1,10 +1,10 @@
 """Recursive multi-step forecasting using a fitted pipeline."""
 from __future__ import annotations
 
+from typing import Any
+
 import numpy as np
 import pandas as pd
-
-from typing import Any
 
 from fashion_analytics.config import (
     FEATURE_COLUMNS,
