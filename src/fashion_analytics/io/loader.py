@@ -41,7 +41,7 @@ def load_datasets(data_dir: Path | None = None) -> dict[str, pd.DataFrame]:
 
 
 
-def quality_report(tables: dict[str, pd.DataFrame]) -> dict[str, dict]:
+def quality_report(tables: dict[str, pd.DataFrame]) -> dict[str, dict[str, Any]]:
     """Compute missing/duplicate stats for each table."""
     report: dict[str, dict[str, Any]] = {}
     for name, df in tables.items():
