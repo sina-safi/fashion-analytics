@@ -101,11 +101,26 @@ Engineered features for daily revenue forecasting:
 
 ### Revenue by Country
 ![Revenue by Country](outputs/figures/country_revenue.png)
+---
+## 🧠 Engineering Practices
+
+This project was built with a focus on **software engineering best practices** for data science, rather than just exploratory scripting.
+
+Key engineering decisions include:
+
+- **Modular Architecture:** Code is organized into a proper Python package (`src/fashion_analytics/`) with separated concerns (`io`, `cleaning`, `analysis`, `modeling`, `reporting`), making it testable, reusable, and maintainable.
+
+- **Type Hinting & Linting:** Type annotations are used throughout the project, with `mypy` in strict mode for static type checking and `ruff` for automated linting and code formatting.
+
+- **CI/CD Pipeline:** GitHub Actions automatically runs tests, linting, and type checks on every push and pull request to help prevent regressions.
+
+- **Reproducibility:** The entire pipeline is orchestrated through a single CLI entry point (`fashion-run`), allowing anyone to clone the repository, install dependencies, and reproduce the analysis results.
 
 ---
 
 ## 📂 Project Structure
 
+```text
 fashion-analytics/
 ├── src/fashion_analytics/       # Main Python package
 │   ├── io/                      # Data loading
@@ -118,18 +133,5 @@ fashion-analytics/
 ├── tests/                       # Pytest unit tests
 ├── data/                        # Place raw CSVs here (gitignored)
 ├── outputs/                     # Generated figures and reports
-
-## 🧠 Engineering Practices
-This project was built with a focus on **software engineering best practices** for data science, rather than just exploratory scripting.
-
-Key engineering decisions include:
-
-- **Modular Architecture:** Code is organized into a proper Python package (`src/fashion_analytics/`) with separated concerns (`io`, `cleaning`, `analysis`, `modeling`, `reporting`), making it testable, reusable, and maintainable.
-
-- **Type Hinting & Linting:** Type annotations are used throughout the project, with `mypy` in strict mode for static type checking and `ruff` for automated linting and code formatting.
-
-- **CI/CD Pipeline:** GitHub Actions automatically runs tests, linting, and type checks on every push and pull request to help prevent regressions.
-
-- **Reproducibility:** The entire pipeline is orchestrated through a single CLI entry point (`fashion-run`), allowing anyone to clone the repository, install dependencies, and reproduce the analysis results.
- pyproject.toml               # Project metadata and dependencies
+            # Project metadata and dependencies
 └── README.md
