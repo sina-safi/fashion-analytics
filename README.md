@@ -102,8 +102,6 @@ Engineered features for daily revenue forecasting:
 ### Revenue by Country
 ![Revenue by Country](outputs/figures/country_revenue.png)
 
-### Monthly Revenue Trend
-![Monthly Revenue Trend](outputs/figures/monthly_revenue.png)
 ---
 
 ## 📂 Project Structure
