@@ -96,6 +96,14 @@ Engineered features for daily revenue forecasting:
 - **Peak Month:** May 2025 (€141,922 revenue).
 - **Customer Segments:** A significant portion of customers fall into the "At Risk" or "Lost" categories, indicating an opportunity for re-engagement campaigns.
 
+### Forecast vs Actual Revenue
+![Forecast vs Actual](outputs/figures/forecast_vs_actual.png)
+
+### Revenue by Country
+![Revenue by Country](outputs/figures/country_revenue.png)
+
+### Monthly Revenue Trend
+![Monthly Revenue Trend](outputs/figures/monthly_revenue.png)
 ---
 
 ## 📂 Project Structure
