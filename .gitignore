@@ -21,10 +21,7 @@ data/*.csv
 !data/.gitkeep
 
 # Outputs
-outputs/figures/*.png
-outputs/reports/*
 !outputs/figures/.gitkeep
-!outputs/reports/.gitkeep
 
 # IDE
 .vscode/

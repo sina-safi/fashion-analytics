@@ -4,6 +4,8 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
+from typing import Any
+
 from fashion_analytics.config import (
     FEATURE_COLUMNS,
     HOLIDAY_DAYS,
@@ -20,7 +22,7 @@ def _is_campaign_active(date: pd.Timestamp, campaigns: pd.DataFrame) -> int:
 
 
 def recursive_forecast(
-    model,
+    model: Any,
     history_df: pd.DataFrame,
     future_df: pd.DataFrame,
     campaigns: pd.DataFrame,

@@ -13,6 +13,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from typing import Any
+
 from fashion_analytics.config import (
     CATEGORICAL_FEATURES,
     NUMERICAL_FEATURES,
@@ -77,7 +79,7 @@ def train_and_evaluate(
     train: pd.DataFrame,
     test: pd.DataFrame,
     campaigns: pd.DataFrame,
-) -> tuple[dict[str, Pipeline], list[ModelResult], dict[str, float | str]]:
+) -> tuple[dict[str, Pipeline], list[ModelResult], dict[str, Any]]:
     """Train all models, evaluate on test, and compute the best baseline.
 
     Args:

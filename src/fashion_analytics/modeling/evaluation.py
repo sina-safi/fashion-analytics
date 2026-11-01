@@ -4,8 +4,9 @@ from __future__ import annotations
 import numpy as np
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
+from typing import Any
 
-def compute_metrics(y_true, y_pred) -> dict[str, float]:
+def compute_metrics(y_true: Any, y_pred: Any) -> dict[str, float]:
     """Return MAE, RMSE, and R2 as floats.
 
     Args:

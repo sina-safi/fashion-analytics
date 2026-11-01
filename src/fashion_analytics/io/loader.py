@@ -1,6 +1,7 @@
 """Load and validate raw CSV datasets."""
 from __future__ import annotations
 
+from typing import Any
 import logging
 from pathlib import Path
 
@@ -41,7 +42,7 @@ def load_datasets(data_dir: Path | None = None) -> dict[str, pd.DataFrame]:
 
 def quality_report(tables: dict[str, pd.DataFrame]) -> dict[str, dict]:
     """Compute missing/duplicate stats for each table."""
-    report: dict[str, dict] = {}
+    report: dict[str, dict[str, Any]] = {}
     for name, df in tables.items():
         report[name] = {
             "shape": df.shape,

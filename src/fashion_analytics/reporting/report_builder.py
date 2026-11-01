@@ -1,6 +1,8 @@
 """Generate summary reports and save them as CSV files."""
 from __future__ import annotations
 
+from typing import Any
+
 import logging
 
 import pandas as pd
@@ -10,7 +12,7 @@ from fashion_analytics.config import REPORTS_DIR
 logger = logging.getLogger(__name__)
 
 
-def save_eda_report(eda: dict) -> None:
+def save_eda_report(eda: dict[str, Any]) -> None:
     """Persist key EDA tables as CSVs in outputs/reports/."""
     tables_to_save = {
         "country": "eda_country.csv",
@@ -34,7 +36,7 @@ def save_rfm_report(rfm: pd.DataFrame) -> None:
     logger.info("Saved report: %s", path)
 
 
-def save_model_results(results: list) -> None:
+def save_model_results(results: list[Any]) -> None:
     """Save model metrics to CSV."""
     rows = [
         {"model": r.name, "mae": r.mae, "rmse": r.rmse, "r2": r.r2}
