@@ -106,7 +106,6 @@ Engineered features for daily revenue forecasting:
 
 ## 📂 Project Structure
 
-```text
 fashion-analytics/
 ├── src/fashion_analytics/       # Main Python package
 │   ├── io/                      # Data loading
@@ -120,9 +119,7 @@ fashion-analytics/
 ├── data/                        # Place raw CSVs here (gitignored)
 ├── outputs/                     # Generated figures and reports
 
----
 ## 🧠 Engineering Practices
-
 This project was built with a focus on **software engineering best practices** for data science, rather than just exploratory scripting.
 
 Key engineering decisions include:
