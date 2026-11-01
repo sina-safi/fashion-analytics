@@ -1,6 +1,5 @@
 """Unit tests for feature engineering."""
 import pandas as pd
-import pytest
 
 from fashion_analytics.modeling.features import add_features
 
