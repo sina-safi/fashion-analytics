@@ -89,7 +89,7 @@ def train_and_evaluate(
         Tuple ``(trained_pipelines, results, baseline_summary)``.
     """
     train_clean = train.dropna().reset_index(drop=True)
-    X_train = train_clean[NUMERICAL_FEATURES + CATEGORICAL_FEATURES]
+    x_train = train_clean[NUMERICAL_FEATURES + CATEGORICAL_FEATURES]
     y_train = train_clean["revenue"]
 
     trained: dict[str, Pipeline] = {}
@@ -97,7 +97,7 @@ def train_and_evaluate(
 
     for name, model in get_models().items():
         pipe = Pipeline([("preprocessor", build_preprocessor()), ("model", model)])
-        pipe.fit(X_train, y_train)
+        pipe.fit(x_train, y_train)
         trained[name] = pipe
 
         preds = recursive_forecast(pipe, train, test, campaigns)

@@ -67,8 +67,8 @@ def recursive_forecast(
                 float(np.std(recent, ddof=1)) if len(recent) > 1 else 0.0
             )
 
-        X_row = pd.DataFrame([row])[FEATURE_COLUMNS]
-        pred = float(model.predict(X_row)[0])
+        x_row = pd.DataFrame([row])[FEATURE_COLUMNS]
+        pred = float(model.predict(x_row)[0])
         preds.append(pred)
 
         history = pd.concat(

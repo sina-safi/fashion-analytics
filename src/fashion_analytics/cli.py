@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 
 import matplotlib
+
 matplotlib.use("Agg")  # headless backend for saving figures
 
 from fashion_analytics.analysis import eda, rfm
@@ -102,6 +103,7 @@ def main() -> None:
 
     # 7. Final forecast plot
     import matplotlib.pyplot as plt
+    
     from fashion_analytics.config import FIGURES_DIR
 
     fig, ax = plt.subplots(figsize=(14, 6))
