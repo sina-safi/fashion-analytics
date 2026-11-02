@@ -9,7 +9,7 @@ description = "Sales EDA and daily revenue forecasting for a fashion retailer"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = Sina Safi, email = Safisina47@gmail.com }]
 keywords = ["data-analysis", "forecasting", "retail", "xgboost", "rfm"]
 classifiers = [
     "Programming Language :: Python :: 3.10",
